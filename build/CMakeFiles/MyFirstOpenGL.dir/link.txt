@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\MyFirstOpenGL.dir/objects.a
+C:\ProgramData\mingw64\mingw64\bin\ar.exe qc CMakeFiles\MyFirstOpenGL.dir/objects.a @CMakeFiles\MyFirstOpenGL.dir\objects1.rsp
+C:\ProgramData\mingw64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\MyFirstOpenGL.dir/objects.a -Wl,--no-whole-archive -o MyFirstOpenGL.exe -Wl,--out-implib,libMyFirstOpenGL.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MyFirstOpenGL.dir\linkLibs.rsp
