@@ -80,12 +80,11 @@ int main() {
     }
 
     float vertices[] = {
-         0.0f,  0.5f, 0.0f,
-        -0.5f, -0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f,
+        // Position         // Colors
+         0.0f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+         0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f
     };
-
-    unsigned int VERTEX_SIZE = 3;
 
     unsigned int VAO, VBO; // Vertex array object (how to interpret VBO data) and vertex buffer object (data in gpu memory)
     glGenVertexArrays(1, &VAO); // Generate ID
@@ -95,8 +94,13 @@ int main() {
     glBindBuffer(GL_ARRAY_BUFFER, VBO); // GL_ARRAY_BUFFER is the target for VBO
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Upload vertex data to VBO
 
-    glVertexAttribPointer(0, VERTEX_SIZE, GL_FLOAT, GL_FALSE, VERTEX_SIZE * sizeof(float), (void*)0); // Describe how to interpret vertex data layout (VAO)
-    glEnableVertexAttribArray(0); // Enable VAO
+    // Attribute layout: id, attribute size, data type, normalized, vertex size (bytes), offset in bytes from start of vertex data
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0); // Position attribute
+    glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float))); // Color attribute
+    glEnableVertexAttribArray(1);
 
     // Create shader program. Vertex runs for each vertex and fragment runs for each pixel/fragment
     unsigned int shaderProgram = createShaderProgram("../shaders/vertex.glsl", "../shaders/fragment.glsl");
@@ -107,7 +111,7 @@ int main() {
 
         glUseProgram(shaderProgram); // Activates the shader program
         glBindVertexArray(VAO); // Bind the VAO (which also binds the VBO because it was binded)
-        glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices) / VERTEX_SIZE); // Draw the triangles
+        glDrawArrays(GL_TRIANGLES, 0, 3); // Draw the triangles
 
         glfwSwapBuffers(window);
         glfwPollEvents();
