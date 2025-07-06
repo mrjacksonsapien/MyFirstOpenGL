@@ -43,6 +43,15 @@ unsigned int createShaderProgram(const std::string &vertexPath, const std::strin
     glAttachShader(program, fs);
     glLinkProgram(program);
 
+    // Check for linking errors
+    int success;
+    glGetProgramiv(program, GL_LINK_STATUS, &success);
+    if (!success) {
+        char log[512];
+        glGetProgramInfoLog(program, 512, nullptr, log);
+        std::cerr << "Shader program linking error:\n" << log << std::endl;
+    }
+
     glDeleteShader(vs);
     glDeleteShader(fs);
 
@@ -51,9 +60,9 @@ unsigned int createShaderProgram(const std::string &vertexPath, const std::strin
 
 int main() {
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // Tell which version of OpenGL I'm using
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Tell glfw I'm using OpenGL?
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Tell glfw I'm using OpenGL
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Triangle", nullptr, nullptr);
     if (!window) {
@@ -62,10 +71,10 @@ int main() {
         return -1;
     }
 
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window); // Make window the current context for rendering
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // Resize viewport when window resizes
 
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) { // Load OpenGL functions (at runtime)
         std::cerr << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
@@ -73,29 +82,32 @@ int main() {
     float vertices[] = {
          0.0f,  0.5f, 0.0f,
         -0.5f, -0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f
+         0.5f, -0.5f, 0.0f,
     };
 
-    unsigned int VAO, VBO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
+    unsigned int VERTEX_SIZE = 3;
 
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    unsigned int VAO, VBO; // Vertex array object (how to interpret VBO data) and vertex buffer object (data in gpu memory)
+    glGenVertexArrays(1, &VAO); // Generate ID
+    glGenBuffers(1, &VBO); // Generate ID
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
+    glBindVertexArray(VAO); // Bind VAO/VBO so subsequent calls affect them.
+    glBindBuffer(GL_ARRAY_BUFFER, VBO); // GL_ARRAY_BUFFER is the target for VBO
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Upload vertex data to VBO
 
-    unsigned int shaderProgram = createShaderProgram("shaders/vertex.glsl", "shaders/fragment.glsl");
+    glVertexAttribPointer(0, VERTEX_SIZE, GL_FLOAT, GL_FALSE, VERTEX_SIZE * sizeof(float), (void*)0); // Describe how to interpret vertex data layout (VAO)
+    glEnableVertexAttribArray(0); // Enable VAO
+
+    // Create shader program. Vertex runs for each vertex and fragment runs for each pixel/fragment
+    unsigned int shaderProgram = createShaderProgram("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT); // Tell that you want to clear the color buffer (the screen)
 
-        glUseProgram(shaderProgram);
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glUseProgram(shaderProgram); // Activates the shader program
+        glBindVertexArray(VAO); // Bind the VAO (which also binds the VBO because it was binded)
+        glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices) / VERTEX_SIZE); // Draw the triangles
 
         glfwSwapBuffers(window);
         glfwPollEvents();
