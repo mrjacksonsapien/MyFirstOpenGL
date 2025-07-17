@@ -62,9 +62,9 @@ int main() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // Tell which version of OpenGL I'm using
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Tell glfw I'm using OpenGL
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Tell glfw I'm using OpenGL core profile
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Triangle", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "MyFirstOpenGL", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create window" << std::endl;
         glfwTerminate();
@@ -80,38 +80,52 @@ int main() {
     }
 
     float vertices[] = {
-        // Position         // Colors
-         0.0f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+        // Position         // Color
+        -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
         -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-         0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f
+        0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+        0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 1.0f
     };
 
-    unsigned int VAO, VBO; // Vertex array object (how to interpret VBO data) and vertex buffer object (data in gpu memory)
-    glGenVertexArrays(1, &VAO); // Generate ID
-    glGenBuffers(1, &VBO); // Generate ID
+    unsigned int indices[] = {
+        0, 1, 2,
+        0, 2, 3
+    };
 
-    glBindVertexArray(VAO); // Bind VAO/VBO so subsequent calls affect them.
-    glBindBuffer(GL_ARRAY_BUFFER, VBO); // GL_ARRAY_BUFFER is the target for VBO
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Upload vertex data to VBO
+    // Create vertex array and buffers
+    unsigned int VAO, VBO, EBO;
+    glGenVertexArrays(1, &VAO); // VAO for vertex attributes
+    glGenBuffers(1, &VBO); // VBO for vertices data
+    glGenBuffers(1, &EBO); // EBO for elements (triangles)
 
-    // Attribute layout: id, attribute size, data type, normalized, vertex size (bytes), offset in bytes from start of vertex data
+    // Bind buffers so subsequent calls affect them (state machine)
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // VAO remembers this EBO
+    
+    // VBO data
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Static draw for now since data is not updated
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0); // Position attribute
-    glEnableVertexAttribArray(0);
+    // EBO data
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float))); // Color attribute
+    // VAO data. Attributes reference the currently binded VBO at creation.
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0); // Position
+    glEnableVertexAttribArray(0); // Pass id used as first argument during. Enables the data stream of that attribute.
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float))); // Color
     glEnableVertexAttribArray(1);
 
     // Create shader program. Vertex runs for each vertex and fragment runs for each pixel/fragment
     unsigned int shaderProgram = createShaderProgram("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
     while (!glfwWindowShouldClose(window)) {
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.0f, 0.5f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT); // Tell that you want to clear the color buffer (the screen)
 
-        glUseProgram(shaderProgram); // Activates the shader program
-        glBindVertexArray(VAO); // Bind the VAO (which also binds the VBO because it was binded)
-        glDrawArrays(GL_TRIANGLES, 0, 3); // Draw the triangles
+        glUseProgram(shaderProgram); // Activate the shader program
+        glBindVertexArray(VAO); // Automatically binds it's EBO and the attributes for rendering
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // Draw EBO
 
         glfwSwapBuffers(window);
         glfwPollEvents();

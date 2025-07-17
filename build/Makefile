@@ -236,6 +236,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Mesh.obj: src/Mesh.cpp.obj
+.PHONY : src/Mesh.obj
+
+# target to build an object file
+src/Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj
+.PHONY : src/Mesh.cpp.obj
+
+src/Mesh.i: src/Mesh.cpp.i
+.PHONY : src/Mesh.i
+
+# target to preprocess a source file
+src/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.i
+.PHONY : src/Mesh.cpp.i
+
+src/Mesh.s: src/Mesh.cpp.s
+.PHONY : src/Mesh.s
+
+# target to generate assembly for a file
+src/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.s
+.PHONY : src/Mesh.cpp.s
+
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
 
@@ -279,6 +303,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Mesh.obj
+	@echo ... src/Mesh.i
+	@echo ... src/Mesh.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s

@@ -12,6 +12,12 @@
   "output": "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj"
 },
 {
+  "directory": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe  @CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyFirstOpenGL.dir\\src\\Mesh.cpp.obj -c C:\\Users\\Martin\\Documents\\Projects\\MyFirstOpenGL\\src\\Mesh.cpp",
+  "file": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Mesh.cpp",
+  "output": "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj"
+},
+{
   "directory": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/build/external/glfw/src",
   "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\Martin\\Documents\\Projects\\MyFirstOpenGL\\external\\glfw\\src\\context.c",
   "file": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/external/glfw/src/context.c",
