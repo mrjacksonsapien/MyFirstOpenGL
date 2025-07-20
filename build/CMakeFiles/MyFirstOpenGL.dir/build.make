@@ -101,39 +101,56 @@ CMakeFiles/MyFirstOpenGL.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyFirstOpenGL.dir/src/glad.c.s"
 	C:\ProgramData\mingw64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\glad.c -o CMakeFiles\MyFirstOpenGL.dir\src\glad.c.s
 
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/flags.make
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj: C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Mesh.cpp
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Martin\Documents\Projects\MyFirstOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj"
-	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj -MF CMakeFiles\MyFirstOpenGL.dir\src\Mesh.cpp.obj.d -o CMakeFiles\MyFirstOpenGL.dir\src\Mesh.cpp.obj -c C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Mesh.cpp
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/flags.make
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj: C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Transform.cpp
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Martin\Documents\Projects\MyFirstOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj -MF CMakeFiles\MyFirstOpenGL.dir\src\Transform.cpp.obj.d -o CMakeFiles\MyFirstOpenGL.dir\src\Transform.cpp.obj -c C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Transform.cpp
 
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.i"
-	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Mesh.cpp > CMakeFiles\MyFirstOpenGL.dir\src\Mesh.cpp.i
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.i"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Transform.cpp > CMakeFiles\MyFirstOpenGL.dir\src\Transform.cpp.i
 
-CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.s"
-	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Mesh.cpp -o CMakeFiles\MyFirstOpenGL.dir\src\Mesh.cpp.s
+CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.s"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Transform.cpp -o CMakeFiles\MyFirstOpenGL.dir\src\Transform.cpp.s
+
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/flags.make
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj: C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Vector3.cpp
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj: CMakeFiles/MyFirstOpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Martin\Documents\Projects\MyFirstOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj -MF CMakeFiles\MyFirstOpenGL.dir\src\Vector3.cpp.obj.d -o CMakeFiles\MyFirstOpenGL.dir\src\Vector3.cpp.obj -c C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Vector3.cpp
+
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.i"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Vector3.cpp > CMakeFiles\MyFirstOpenGL.dir\src\Vector3.cpp.i
+
+CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.s"
+	C:\ProgramData\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Martin\Documents\Projects\MyFirstOpenGL\src\Vector3.cpp -o CMakeFiles\MyFirstOpenGL.dir\src\Vector3.cpp.s
 
 # Object files for target MyFirstOpenGL
 MyFirstOpenGL_OBJECTS = \
 "CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj" \
 "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj" \
-"CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj"
+"CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj" \
+"CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj"
 
 # External object files for target MyFirstOpenGL
 MyFirstOpenGL_EXTERNAL_OBJECTS =
 
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj
-MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj
+MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj
+MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/build.make
 MyFirstOpenGL.exe: external/glfw/src/libglfw3.a
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/linkLibs.rsp
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/objects1.rsp
 MyFirstOpenGL.exe: CMakeFiles/MyFirstOpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Martin\Documents\Projects\MyFirstOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MyFirstOpenGL.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Martin\Documents\Projects\MyFirstOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable MyFirstOpenGL.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MyFirstOpenGL.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

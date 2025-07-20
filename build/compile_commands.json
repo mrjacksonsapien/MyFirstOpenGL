@@ -13,9 +13,15 @@
 },
 {
   "directory": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/build",
-  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe  @CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyFirstOpenGL.dir\\src\\Mesh.cpp.obj -c C:\\Users\\Martin\\Documents\\Projects\\MyFirstOpenGL\\src\\Mesh.cpp",
-  "file": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Mesh.cpp",
-  "output": "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj"
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe  @CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyFirstOpenGL.dir\\src\\Transform.cpp.obj -c C:\\Users\\Martin\\Documents\\Projects\\MyFirstOpenGL\\src\\Transform.cpp",
+  "file": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Transform.cpp",
+  "output": "CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj"
+},
+{
+  "directory": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe  @CMakeFiles/MyFirstOpenGL.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyFirstOpenGL.dir\\src\\Vector3.cpp.obj -c C:\\Users\\Martin\\Documents\\Projects\\MyFirstOpenGL\\src\\Vector3.cpp",
+  "file": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Vector3.cpp",
+  "output": "CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj"
 },
 {
   "directory": "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/build/external/glfw/src",

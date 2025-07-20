@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj"
   "CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj.d"
-  "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj"
-  "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj.d"
+  "CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj"
+  "CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj.d"
+  "CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj"
+  "CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj.d"
   "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj"
   "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj.d"
   "MyFirstOpenGL.exe"

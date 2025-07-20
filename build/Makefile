@@ -236,29 +236,53 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Mesh.obj: src/Mesh.cpp.obj
-.PHONY : src/Mesh.obj
+src/Transform.obj: src/Transform.cpp.obj
+.PHONY : src/Transform.obj
 
 # target to build an object file
-src/Mesh.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj
-.PHONY : src/Mesh.cpp.obj
+src/Transform.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj
+.PHONY : src/Transform.cpp.obj
 
-src/Mesh.i: src/Mesh.cpp.i
-.PHONY : src/Mesh.i
+src/Transform.i: src/Transform.cpp.i
+.PHONY : src/Transform.i
 
 # target to preprocess a source file
-src/Mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.i
-.PHONY : src/Mesh.cpp.i
+src/Transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.i
+.PHONY : src/Transform.cpp.i
 
-src/Mesh.s: src/Mesh.cpp.s
-.PHONY : src/Mesh.s
+src/Transform.s: src/Transform.cpp.s
+.PHONY : src/Transform.s
 
 # target to generate assembly for a file
-src/Mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.s
-.PHONY : src/Mesh.cpp.s
+src/Transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.s
+.PHONY : src/Transform.cpp.s
+
+src/Vector3.obj: src/Vector3.cpp.obj
+.PHONY : src/Vector3.obj
+
+# target to build an object file
+src/Vector3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj
+.PHONY : src/Vector3.cpp.obj
+
+src/Vector3.i: src/Vector3.cpp.i
+.PHONY : src/Vector3.i
+
+# target to preprocess a source file
+src/Vector3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.i
+.PHONY : src/Vector3.cpp.i
+
+src/Vector3.s: src/Vector3.cpp.s
+.PHONY : src/Vector3.s
+
+# target to generate assembly for a file
+src/Vector3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyFirstOpenGL.dir\build.make CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.s
+.PHONY : src/Vector3.cpp.s
 
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
@@ -303,9 +327,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Mesh.obj
-	@echo ... src/Mesh.i
-	@echo ... src/Mesh.s
+	@echo ... src/Transform.obj
+	@echo ... src/Transform.i
+	@echo ... src/Transform.s
+	@echo ... src/Vector3.obj
+	@echo ... src/Vector3.i
+	@echo ... src/Vector3.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s

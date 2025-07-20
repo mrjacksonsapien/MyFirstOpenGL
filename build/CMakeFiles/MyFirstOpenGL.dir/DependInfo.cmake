@@ -10,7 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/glad.c" "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj" "gcc" "CMakeFiles/MyFirstOpenGL.dir/src/glad.c.obj.d"
   "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/main.cpp" "CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj" "gcc" "CMakeFiles/MyFirstOpenGL.dir/main.cpp.obj.d"
-  "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Mesh.cpp" "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj" "gcc" "CMakeFiles/MyFirstOpenGL.dir/src/Mesh.cpp.obj.d"
+  "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Transform.cpp" "CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj" "gcc" "CMakeFiles/MyFirstOpenGL.dir/src/Transform.cpp.obj.d"
+  "C:/Users/Martin/Documents/Projects/MyFirstOpenGL/src/Vector3.cpp" "CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj" "gcc" "CMakeFiles/MyFirstOpenGL.dir/src/Vector3.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
